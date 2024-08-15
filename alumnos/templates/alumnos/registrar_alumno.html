@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Registrar Alumno{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Registrar Alumno</h2>
+<form method="post" class="needs-validation" novalidate>
+    {% csrf_token %}
+    <div class="form-row">
+        {{ form.as_p }}
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
+{% endblock %}
